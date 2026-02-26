@@ -2039,7 +2039,7 @@ const products = [
 },
 {
   name: "Cosmetiquera de Viaje Plegable Práctica y Elegante",
-  price: 280.00,
+  price: 300.00,
   categories: ["Bolsos y Carteras", "Accesorios Varios"],
   description: [
     "Organización total: múltiples compartimentos con cierre y malla transparente para tener todo a la vista y al alcance.",
@@ -2059,7 +2059,7 @@ const products = [
 //ULTIMO PRODUCTO
   {
   name: "Auriculares Gaming X15 con LEDS y Pantalla PAGA AL RECIBIR TODO HONDURAS",
-  price: 290.00,
+  price: 300.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "🎧🔥 Auriculares Gaming X15 con LEDs y pantalla digital: sonido potente, estilo futurista y cero retraso para jugar al máximo.",
@@ -2107,7 +2107,7 @@ const products = [
 },
 {
   name: "Jabon para Cara ORIGINAL Piel Seca a Normal ENVIOS A TODO HONDURAS",
-  price: 500.00,
+  price: 550.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "🧴💧 Limpieza suave y efectiva con CeraVe Hydrating Facial Cleanser—ideal para piel normal a seca y respetuoso con la barrera de tu piel.",
@@ -2120,7 +2120,7 @@ const products = [
     "images/crr3.jpg"
   ]
 },
-{
+/*{
   name: "Detox Suplemento Greens y Superfoods tipo Bloom ENVIOS TODO HONDURAS",
   price: 780.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
@@ -2133,7 +2133,7 @@ const products = [
     "images/det1.jpg",
     "images/det2.jpg"
   ]
-},
+},*/
 {
   name: "Colageno Suplemento Tableta 5 COLAGENOS‼️ENVIOS TODO HONDURAS",
   price: 450.00,
