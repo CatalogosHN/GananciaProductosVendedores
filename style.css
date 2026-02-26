@@ -1853,53 +1853,6 @@ body.theme-dark .pi-img{ background: rgba(255,255,255,0.04); }
 }
 
 
-.price-section {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-items: center;
-    margin-top: 15px;
-}
-
-/* Estilo base tipo cápsula */
-.badge {
-    padding: 10px 22px;
-    border-radius: 999px;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0 0 12px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
-}
-
-/* DISPONIBLE - Verde */
-.disponible {
-    background: rgba(0, 255, 140, 0.12);
-    color: #00ff8c;
-    border: 1px solid #00ff8c;
-    box-shadow: 0 0 12px rgba(0,255,140,0.4);
-}
-
-/* PRECIO - Azul */
-.precio {
-    background: rgba(0, 140, 255, 0.12);
-    color: #0090ff;
-    border: 1px solid #0090ff;
-    box-shadow: 0 0 12px rgba(0,140,255,0.4);
-    font-size: 18px;
-}
-
-/* GANANCIA - Verde fuerte */
-.ganancia {
-    background: rgba(0, 255, 140, 0.12);
-    color: #00ff8c;
-    border: 1px solid #00ff8c;
-    box-shadow: 0 0 14px rgba(0,255,140,0.5);
-    font-size: 17px;
-}
-
 /* ===========================
    ✅ FIX: Dock móvil (no tapa tarjetas)
    =========================== */
@@ -1993,4 +1946,73 @@ body.theme-dark .pi-img{ background: rgba(255,255,255,0.04); }
 }
 .price-label, .profit-label{
   font-weight: 700;
+}
+
+/* =========================================================
+   ✅ CAPSULAS (ovalo) para PRECIO y GANANCIA (sin romper nada)
+   - Solo afecta dentro de .product
+   - Precio (azul) / Ganancia (verde)
+   ========================================================= */
+
+.product .price,
+.product .profit{
+  width: fit-content;
+  margin: .35rem auto .55rem;
+  padding: .38rem .85rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-weight: 800;
+  font-size: .92rem;
+  letter-spacing: .25px;
+  line-height: 1.1;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 10px 24px rgba(0,0,0,0.14);
+}
+
+/* Glow un poco más fuerte en tema oscuro */
+body.theme-dark .product .price,
+body.theme-dark .product .profit{
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 10px 26px rgba(0,0,0,0.35);
+}
+
+/* Puntito como el DISPONIBLE */
+.product .price::before,
+.product .profit::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+  flex: 0 0 8px;
+}
+
+/* 🔵 Precio (azul) */
+.product .price{
+  background: rgba(0,120,255,0.10);
+  color: #1f8fff;
+  border-color: rgba(0,120,255,0.35);
+}
+
+/* 🟢 Ganancia (verde) */
+.product .profit{
+  background: rgba(15,157,114,0.10);
+  color: #0f9d72;
+  border-color: rgba(15,157,114,0.32);
+}
+
+/* Compacto en móvil */
+@media (max-width: 640px){
+  .product .price,
+  .product .profit{
+    font-size: .85rem;
+    padding: .34rem .72rem;
+  }
 }
