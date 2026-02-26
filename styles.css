@@ -1,0 +1,54 @@
+/* ==== Contenedor ==== */
+.price-section{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:center;
+  margin-top:15px;
+}
+
+/* ==== Estilo base tipo cápsula/ovalo ==== */
+.badge{
+  padding:10px 22px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:.5px;
+  text-align:center;
+  display:inline-block;
+  box-shadow:0 0 12px rgba(0,0,0,.40);
+  transition:.25s ease;
+  user-select:none;
+}
+
+/* DISPONIBLE (verde) */
+.disponible{
+  background:rgba(0,255,140,.12);
+  color:#00ff8c;
+  border:1px solid #00ff8c;
+  box-shadow:0 0 12px rgba(0,255,140,.40);
+}
+
+/* PRECIO (azul) */
+.precio{
+  background:rgba(0,140,255,.12);
+  color:#0090ff;
+  border:1px solid #0090ff;
+  box-shadow:0 0 12px rgba(0,140,255,.40);
+  font-size:18px;
+}
+
+/* GANANCIA (verde) */
+.ganancia{
+  background:rgba(0,255,140,.12);
+  color:#00ff8c;
+  border:1px solid #00ff8c;
+  box-shadow:0 0 14px rgba(0,255,140,.50);
+  font-size:17px;
+}
+
+/* Extra: pequeño “pop” al pasar mouse (PC) */
+.badge:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.08);
+}

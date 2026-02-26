@@ -1,194 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>International Items HN | Catálogo</title>
-  <link rel="stylesheet" href="style.css?v=20251220v3" />
-  <script defer src="script.js?v=20251220v3"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Badges: Disponible / Precio / Ganancia</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-dark">
+<body>
 
-  <!-- 🔝 NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
-      <h1 class="logo"><span>International</span> Items HN</h1>
-      <nav class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
-          <span class="t-dark is-active">🌙 Oscuro</span>
-          <span class="t-sep">|</span>
-          <span class="t-light">☀️ Claro</span>
-        </button>
-</div>
-
-    </div>
-  </header>
-
-<!-- ⚡ OFERTAS CYBER WEEK (BANNER PRO) -->
-<section class="cyber-week-banner" aria-live="polite">
-  <div class="cyber-week-inner">
-    
-    <div class="cyber-left">
-      <div class="cyber-badge">🔥🛒⚡</div>
-      <div class="cyber-title">
-  OFERTAS TEMPORALES CYBER WEEK 
-  <span class="cyber-title-sub">ENVÍO GRATIS TODO HONDURAS</span>
-      <div class="cyber-subtitle">Descuentos relámpago por tiempo limitado</div>
-    </div>
-
-    <div class="cyber-right">
-      <div class="cyber-label">Acaba en</div>
-      <div class="cyber-digital" id="cyber-countdown">
-        <div class="cyber-unit">
-          <span class="cyber-num" id="cw-days">06</span>
-          <span class="cyber-text">DÍAS</span>
-        </div>
-        <span class="cyber-sep">:</span>
-        <div class="cyber-unit">
-          <span class="cyber-num" id="cw-hours">23</span>
-          <span class="cyber-text">HORAS</span>
-        </div>
-        <span class="cyber-sep">:</span>
-        <div class="cyber-unit">
-          <span class="cyber-num" id="cw-mins">00</span>
-          <span class="cyber-text">MIN</span>
-        </div>
-        <span class="cyber-sep">:</span>
-        <div class="cyber-unit">
-          <span class="cyber-num" id="cw-secs">00</span>
-          <span class="cyber-text">SEG</span>
-        </div>
-      </div>
-    </div>
-
+  <!--
+    ✅ COPIA/PEGA ESTE BLOQUE en el lugar donde actualmente te aparece:
+    "DISPONIBLE", "Precio de Venta: ...", "Ganancia del Vendedor: ..."
+    (dentro de la tarjeta o ficha del producto).
+  -->
+  <div class="price-section">
+    <div class="badge disponible">● DISPONIBLE</div>
+    <div class="badge precio">Precio de Venta: L 3,800</div>
+    <div class="badge ganancia">Ganancia del Vendedor: L 494</div>
   </div>
-</section>
-
-  <!-- 🦋 HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
-      <h2>Tu estilo, tu tienda</h2>
-      <p>Productos modernos, precios irresistibles y calidad garantizada.</p>
-      <p>Lo piensas, Lo tenemos O lo traemos 🛩📦</p>
-      <button class="btn-primary scroll-to" data-target="#productos">Explorar productos</button>
-    </div>
-  </section>
-
-  <!-- 💎 PRODUCTOS -->
-  <section class="products" id="productos">
-<!-- 🏷️ Categorías -->
-<div id="category-bar" class="category-bar"></div>
-    <div class="products-header">
-      <div class="sort-control">
-        <label for="sort-select">Ordenar de:</label>
-        <select id="sort-select" aria-label="Ordenar productos">
-          <option value="recent" selected>Producto recien ingresado</option>
-          <option value="price_asc">de menor a mayor precio</option>
-          <option value="az">Ordenar de A - Z</option>
-        </select>
-      </div>
-      <h2 class="section-title">Nuestros Productos</h2>
-      <div class="products-header-spacer" aria-hidden="true"></div>
-    </div>
-    <!-- 🔎 Banner de resultados de búsqueda -->
-<div id="search-banner" class="search-banner hidden">
-  <span id="search-banner-text"></span>
-  <button id="clear-search" class="search-banner-close" aria-label="Quitar filtro">✕</button>
-</div>
-    <div class="product-grid" id="product-list"></div>
-  </section>
-
-  <!-- 🛒 MODAL CARRITO -->
-
-</div>
-
-  <!-- 💳 FORMULARIO DE CHECKOUT -->
-
-<!-- 📞 CONTACTO -->
-  <section class="contact" id="contacto">
-    <h2 class="section-title">Contáctanos</h2>
-    <form id="contact-form" class="contact-form">
-  <input type="text" name="nombre" placeholder="Tu nombre" required>
-  <input type="email" name="correo" placeholder="Tu correo" required>
-  <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
-  <button class="btn-primary" type="submit">Enviar mensaje</button>
-  <div id="contact-status" style="text-align:center;font-weight:500;margin-top:.5rem;"></div>
-</form>
-  </section>
-
-  <footer class="footer">
-    <p>© 2025 RAUDA Shop — Todos los derechos reservados</p>
-  </footer>
- <!-- 🔍 Lightbox con navegación -->
-<div id="image-viewer" class="image-viewer hidden">
-  <button id="viewer-prev" class="viewer-arrow">❮</button>
-  <img id="viewer-img" src="" alt="Vista ampliada">
-  <button id="viewer-next" class="viewer-arrow">❯</button>
-  <span id="close-viewer">&times;</span>
-</div>
-
-<!-- 🔎 Botón flotante de búsqueda -->
-<button id="floating-search" class="floating-search hidden" aria-label="Buscar productos">🔎</button>
-
-<!-- 🔍 Modal de búsqueda -->
-<div id="search-modal" class="search-modal hidden">
-  <div class="search-content" role="dialog" aria-modal="true" aria-labelledby="search-title">
-    <button id="close-search-modal" class="close-search" aria-label="Cerrar">×</button>
-    <h3 id="search-title">Buscar productos</h3>
-    <div class="search-bar">
-      <input id="fs-input" type="text" placeholder="Nombre, descripción o precio..." autocomplete="off" />
-      <button id="search-confirm" class="btn-search">Buscar</button>
-    </div>
-    <p class="search-hint">Consejos: prueba “powerbank”, “cámara”, “300”, “L 140”, etc.</p>
-  </div>
-</div>
-
-<!-- ✅ SDK EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (typeof emailjs === "undefined") { console.error("❌ EmailJS no cargó correctamente"); return; }
-    emailjs.init("XwKAz-6miwjRCNBcd");   // ← tu Public Key
-  });
-</script>
-
-<!-- 🟣 AVISO CENTRAL TEMPORAL -->
-<div id="cyber-alert" class="cyber-alert">
-  ⚡ OFERTAS TEMPORALES CYBER WEEK — ENVÍOS GRATIS A PARTIR DE 2,500 LPS ⚡
-</div>
-  
-
-<!-- ℹ️ Modal: Más información del producto -->
-<div id="product-info-modal" class="product-info-modal hidden">
-  <div class="product-info-content" role="dialog" aria-modal="true" aria-label="Detalles del producto">
-    <button id="close-product-info" class="close-product-info" type="button" aria-label="Cerrar">×</button>
-    <div id="product-info-body"></div>
-  </div>
-</div>
-
-
-<!-- 📌 Barra inferior (móvil): Buscar -->
-<div id="mobile-dock" class="mobile-dock" aria-label="Acciones rápidas">
-  <button id="dock-search" class="dock-btn" type="button" aria-label="Buscar productos">🔎 Buscar</button>
-</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
