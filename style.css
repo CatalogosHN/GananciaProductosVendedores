@@ -1853,6 +1853,53 @@ body.theme-dark .pi-img{ background: rgba(255,255,255,0.04); }
 }
 
 
+.price-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+/* Estilo base tipo cápsula */
+.badge {
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    transition: 0.3s ease;
+}
+
+/* DISPONIBLE - Verde */
+.disponible {
+    background: rgba(0, 255, 140, 0.12);
+    color: #00ff8c;
+    border: 1px solid #00ff8c;
+    box-shadow: 0 0 12px rgba(0,255,140,0.4);
+}
+
+/* PRECIO - Azul */
+.precio {
+    background: rgba(0, 140, 255, 0.12);
+    color: #0090ff;
+    border: 1px solid #0090ff;
+    box-shadow: 0 0 12px rgba(0,140,255,0.4);
+    font-size: 18px;
+}
+
+/* GANANCIA - Verde fuerte */
+.ganancia {
+    background: rgba(0, 255, 140, 0.12);
+    color: #00ff8c;
+    border: 1px solid #00ff8c;
+    box-shadow: 0 0 14px rgba(0,255,140,0.5);
+    font-size: 17px;
+}
+
 /* ===========================
    ✅ FIX: Dock móvil (no tapa tarjetas)
    =========================== */
