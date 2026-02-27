@@ -100,6 +100,7 @@ const products = [
  {
   name: "INFABLE SANTA CLAUS NAVIDAD 1.8 METROS🥳‼️🎄",
   price: 1300.0,
+   profitFixed: 200,
   categories: ["Accesorios Varios", "Navidad"],
   description: [
     "¡Decoración NAVIDEÑA nivel PRO! 🎅✨ Este Santa inflable mide 1.8 metros, tan grande como una persona. ¡Llama la atención desde lejos!",
