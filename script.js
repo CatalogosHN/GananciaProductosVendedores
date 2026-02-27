@@ -2136,7 +2136,7 @@ const products = [
 },*/
 {
   name: "Colageno Suplemento Tableta 5 COLAGENOS‼️ENVIOS TODO HONDURAS",
-  price: 450.00,
+  price: 500.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "✨💊 Suplemento de colágeno con 5 tipos esenciales para apoyar tu piel, articulaciones y bienestar general—¡fácil de tomar y súper completo!",
@@ -2149,7 +2149,7 @@ const products = [
 },
 {
   name: "Camara Exterior 360 Giratoria Wifi LIQUIDACIÓN",
-  price: 380.00,
+  price: 440.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "📹🚨 Cámara exterior giratoria WiFi con visión clara día/noche—protege tu hogar con tecnología premium a PRECIO DE LIQUIDACIÓN.",
@@ -2175,7 +2175,7 @@ const products = [
 },
 {
   name: "Soporte Camara y Celular para Casco OFERTA",
-  price: 180.00,
+  price: 200.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "📸🔥 Graba tus rutas como un PRO con este soporte de cámara y celular para casco: firme, seguro y listo para cualquier aventura.",
