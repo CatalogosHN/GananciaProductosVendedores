@@ -2251,14 +2251,13 @@ if (window.emailjs) {
 }
 
 
-// === FORMATEADOR DE MONEDA === (Precio SIN decimales / Ganancia CON decimales)
+// === FORMATEADOR DE MONEDA === (personalizado sin decimales y con L)
 function formatLempiras(amount) {
   if (isNaN(amount)) amount = 0;
   return "L " + Number(amount).toLocaleString("es-HN", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
-  });
-}
+  }
 
 // ✅ Para GANANCIA: permite decimales (ej: 448.5) sin redondear a entero
 function formatLempirasAuto(amount) {
@@ -2268,7 +2267,6 @@ function formatLempirasAuto(amount) {
     maximumFractionDigits: 2
   });
 }
-
 );
 }
 
