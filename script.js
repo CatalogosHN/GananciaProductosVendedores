@@ -2257,7 +2257,17 @@ function formatLempiras(amount) {
   return "L " + Number(amount).toLocaleString("es-HN", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0
+  }
+
+// ✅ Para GANANCIA: permite decimales (ej: 448.5) sin redondear a entero
+function formatLempirasAuto(amount) {
+  if (isNaN(amount)) amount = 0;
+  return "L " + Number(amount).toLocaleString("es-HN", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2
   });
+}
+);
 }
 
 
@@ -2698,7 +2708,7 @@ function openProductInfo(index) {
         <span class="availability-text">${availability}</span>
       </div>
       <p class="price pi-price"><span class="price-label">Precio de Venta:</span> ${formatLempiras(p.price)}</p>
-      <p class="profit pi-profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempiras(getProfitValue(p))}</p>
+      <p class="profit pi-profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempirasAuto(getProfitValue(p))}</p>
 
 </div>
 
@@ -2813,7 +2823,7 @@ function renderProducts(list = products) {
         <span class="availability-text">${getAvailabilityLabel(p)}</span>
       </div>
       <p class="price"><span class="price-label">Precio de Venta:</span> ${formatLempiras(p.price)}</p>
-      <p class="profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempiras(getProfitValue(p))}</p>
+      <p class="profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempirasAuto(getProfitValue(p))}</p>
 
 <button class="more-info-btn" type="button" onclick="openProductInfo(${safeIndex})">ℹ️ Más información</button>
     `;
