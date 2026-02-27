@@ -61,10 +61,11 @@ const products = [
     "images/8p..c6.png",
     "images/8p..c7.png"
   ]
-},
+},*/
  {
   name: "🍎✨ iPhone 8 Plus 256GB NUEVO*.",
   price: 5600.0,
+   profitFixed: 400,
   categories: ["Tecnologia y Juegos", "Celulares y Tablets"],
   description: [
     "Batería 100% 🔋, en caja con todos sus accesorios originales. Potencia y elegancia clásica. 📦🔥",
@@ -81,6 +82,7 @@ const products = [
  {
   name: "Samsung S24 Ultra - 256GB - 12 RAM*",
   price: 16500.0,
+   profitFixed: 400,
   categories: ["Tecnologia y Juegos", "Celulares y Tablets"],
   description: [
     "📱🔥 Samsung S24 Ultra — Potencia extrema con 12 GB RAM, 256 GB de espacio y cámara brutal para fotos y videos de nivel pro. 🚀📸",
@@ -96,7 +98,7 @@ const products = [
     "images/S24ull7.png",
     "images/S24ull8.png"
   ]
-},*/
+},
  {
   name: "INFABLE SANTA CLAUS NAVIDAD 1.8 METROS🥳‼️🎄",
   price: 1500.0,
