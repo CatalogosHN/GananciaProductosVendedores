@@ -2136,7 +2136,7 @@ const products = [
 },*/
 {
   name: "Colageno Suplemento Tableta 5 COLAGENOS‼️ENVIOS TODO HONDURAS",
-  price: 500.00,
+  price: 450.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "✨💊 Suplemento de colágeno con 5 tipos esenciales para apoyar tu piel, articulaciones y bienestar general—¡fácil de tomar y súper completo!",
@@ -2149,7 +2149,7 @@ const products = [
 },
 {
   name: "Camara Exterior 360 Giratoria Wifi LIQUIDACIÓN",
-  price: 440.00,
+  price: 380.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "📹🚨 Cámara exterior giratoria WiFi con visión clara día/noche—protege tu hogar con tecnología premium a PRECIO DE LIQUIDACIÓN.",
@@ -2175,7 +2175,7 @@ const products = [
 },
 {
   name: "Soporte Camara y Celular para Casco OFERTA",
-  price: 200.00,
+  price: 180.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
   description: [
     "📸🔥 Graba tus rutas como un PRO con este soporte de cámara y celular para casco: firme, seguro y listo para cualquier aventura.",
@@ -2203,6 +2203,30 @@ const products = [
 
   
 ];
+
+// =========================================================
+// ✅ GANANCIA DEL VENDEDOR (DEFAULT 13%) + OVERRIDE POR PRODUCTO
+// - Si el producto tiene: profitFixed: 200  => usa ganancia fija (L 200)
+// - Si el producto tiene: profitPercent: 0.08 => usa 8% para ese producto
+// - Si no tiene nada => usa 13% (DEFAULT)
+// =========================================================
+const DEFAULT_SELLER_PROFIT_PERCENT = 0.13;
+
+function hasFixedProfit(p) {
+  return typeof p?.profitFixed === "number" && !isNaN(p.profitFixed);
+}
+
+function getProfitValue(p) {
+  if (hasFixedProfit(p)) return p.profitFixed;
+  if (typeof p?.profitPercent === "number" && !isNaN(p.profitPercent)) return p.price * p.profitPercent;
+  return p.price * DEFAULT_SELLER_PROFIT_PERCENT;
+}
+
+function getProfitLabel(p) {
+  return hasFixedProfit(p) ? "GANANCIA FIJA:" : "GANANCIA DEL VENDEDOR:";
+}
+
+
 
 // === CONFIGURACIÓN ===
 // === EMAILJS CONFIG ===
@@ -2672,7 +2696,7 @@ function openProductInfo(index) {
         <span class="availability-text">${availability}</span>
       </div>
       <p class="price pi-price"><span class="price-label">Precio de Venta:</span> ${formatLempiras(p.price)}</p>
-      <p class="profit pi-profit"><span class="profit-label">GANANCIA DEL VENDEDOR:</span> ${formatLempiras(p.price * 0.13)}</p>
+      <p class="profit pi-profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempiras(getProfitValue(p))}</p>
 
 </div>
 
@@ -2787,7 +2811,7 @@ function renderProducts(list = products) {
         <span class="availability-text">${getAvailabilityLabel(p)}</span>
       </div>
       <p class="price"><span class="price-label">Precio de Venta:</span> ${formatLempiras(p.price)}</p>
-      <p class="profit"><span class="profit-label">GANANCIA DEL VENDEDOR:</span> ${formatLempiras(p.price * 0.13)}</p>
+      <p class="profit"><span class="profit-label">${getProfitLabel(p)}</span> ${formatLempiras(getProfitValue(p))}</p>
 
 <button class="more-info-btn" type="button" onclick="openProductInfo(${safeIndex})">ℹ️ Más información</button>
     `;
