@@ -2252,26 +2252,21 @@ if (window.emailjs) {
 
 
 // === FORMATEADOR DE MONEDA === (personalizado sin decimales y con L)
+// === FORMATEADOR DE MONEDA ===
+// Precio: SIN decimales (ej: L 3,800)
+// Ganancia: CON decimales si existen (ej: L 448.5) -> NO redondea a entero
 function formatLempiras(amount) {
-  if (isNaN(amount)) amount = 0;
-  return "L " + Number(amount).toLocaleString("es-HN", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0
-  }
+  amount = Number(amount);
+  if (!isFinite(amount)) amount = 0;
+  return "L " + amount.toLocaleString("en-US", { maximumFractionDigits: 0 });
+}
 
-// ✅ Para GANANCIA: permite decimales (ej: 448.5) sin redondear a entero
 function formatLempirasAuto(amount) {
-  if (isNaN(amount)) amount = 0;
-  return "L " + Number(amount).toLocaleString("es-HN", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2
-  });
-}
-);
+  amount = Number(amount);
+  if (!isFinite(amount)) amount = 0;
+  return "L " + amount.toLocaleString("en-US", { maximumFractionDigits: 2 });
 }
 
-
-/* === 🌙/☀️ TEMA OSCURO / CLARO (por defecto OSCURO) === */
 const THEME_STORAGE_KEY = "cellzone_theme";
 
 function setTheme(theme) {
