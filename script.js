@@ -99,8 +99,7 @@ const products = [
 },*/
  {
   name: "INFABLE SANTA CLAUS NAVIDAD 1.8 METROS🥳‼️🎄",
-  price: 1300.0,
-   profitFixed: 200,
+  price: 1500.0,
   categories: ["Accesorios Varios", "Navidad"],
   description: [
     "¡Decoración NAVIDEÑA nivel PRO! 🎅✨ Este Santa inflable mide 1.8 metros, tan grande como una persona. ¡Llama la atención desde lejos!",
@@ -128,7 +127,7 @@ const products = [
 },
 {
   name: "Tableta Fire 7 Niños, Kids 16GB con Cargador 66W GRATIS",
-  price: 2010.0,
+  price: 2180.0,
   categories: ["Tecnologia y Juegos", "Celulares y Tablets"],
   description: [
     "👶📱 Diseñada especialmente para niños. Resistente, colorida y fácil de usar. Ideal para aprender, jugar y entretenerse sin preocupaciones 😍",
