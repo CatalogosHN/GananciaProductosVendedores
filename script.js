@@ -1078,7 +1078,7 @@ const products = [
     "images/power6.jpg"
   ]
 },
-{
+/*{
   name: "Disco SSD 960GB NUEVO SELLADO",
   price: 2050.00,
   categories: ["Tecnologia y Juegos", "Accesorios Varios"],
@@ -1092,7 +1092,7 @@ const products = [
     "images/king2.jpg",
     "images/king3.jpg"
   ]
-},
+},*/
 {
   name: "Lego de Construcción de Accion Variedad",
   price: 460.00,
