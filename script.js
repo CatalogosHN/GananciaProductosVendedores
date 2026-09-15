@@ -61,7 +61,7 @@ const products = [
     "images/8p..c6.png",
     "images/8p..c7.png"
   ]
-},*/
+},
  {
   name: "🍎✨ iPhone 8 Plus 256GB NUEVO*.",
   price: 5950.0,
@@ -78,7 +78,7 @@ const products = [
     "images/8plusc3.png",
     "images/8plusc4.png"
   ]
-},
+},*/
  {
   name: "Samsung S24 Ultra - 256GB - 12 RAM*",
   price: 18400.0,
